@@ -47,17 +47,6 @@ F 3 "https://www.diodes.com/assets/Datasheets/AP2112.pdf" H 1965 6100 50  0001 C
 	1    0    0    -1  
 $EndComp
 $Comp
-L Transistor_FET:BS870 Q1
-U 1 1 5E1F28D4
-P 1190 5640
-F 0 "Q1" H 1396 5686 50  0000 L CNN
-F 1 "BS870" H 1396 5595 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 1390 5565 50  0001 L CIN
-F 3 "http://www.diodes.com/assets/Datasheets/ds11302.pdf" H 1190 5640 50  0001 L CNN
-	1    1190 5640
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R_Small R2
 U 1 1 5E1F87DE
 P 1490 6040
@@ -1364,19 +1353,19 @@ Wire Wire Line
 	6190 5590 6120 5590
 Wire Wire Line
 	6190 5690 6120 5690
-Text Label 6120 5590 2    50   ~ 0
+Text Label 6115 5490 2    50   ~ 0
 SWDIO
-Text Label 6120 5690 2    50   ~ 0
+Text Label 6120 5590 2    50   ~ 0
 SWCLK
 $Comp
 L power:GND #PWR029
 U 1 1 5E237980
-P 5810 5565
-F 0 "#PWR029" H 5810 5315 50  0001 C CNN
-F 1 "GND" H 5815 5392 50  0000 C CNN
-F 2 "" H 5810 5565 50  0001 C CNN
-F 3 "" H 5810 5565 50  0001 C CNN
-	1    5810 5565
+P 6120 5690
+F 0 "#PWR029" H 6120 5440 50  0001 C CNN
+F 1 "GND" H 6125 5517 50  0000 C CNN
+F 2 "" H 6120 5690 50  0001 C CNN
+F 3 "" H 6120 5690 50  0001 C CNN
+	1    6120 5690
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1390,10 +1379,6 @@ F 3 "" H 6120 5390 50  0001 C CNN
 	1    6120 5390
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5810 5490 5810 5565
-Wire Wire Line
-	5810 5490 6190 5490
 Wire Notes Line
 	6975 6530 6975 4335
 Wire Notes Line
@@ -1412,4 +1397,17 @@ Text Notes 3515 1675 0    50   ~ 0
 NOTA: DFU??
 Text Notes 1195 3160 0    50   ~ 0
 NOTA: BOOT
+Wire Wire Line
+	6190 5490 6115 5490
+$Comp
+L Device:Q_PMOS_SGD Q?
+U 1 1 5E39C807
+P 1190 5640
+F 0 "Q?" H 1394 5686 50  0000 L CNN
+F 1 "DMG3415U-7" H 1370 5770 50  0000 L CNN
+F 2 "" H 1390 5740 50  0001 C CNN
+F 3 "~" H 1190 5640 50  0001 C CNN
+	1    1190 5640
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
