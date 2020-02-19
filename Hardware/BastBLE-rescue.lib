@@ -1,11 +1,11 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# E73-2G4M08S1C-electroniccats
+# E73-2G4M08S1C-electroniccats-BastBLE-rescue
 #
-DEF E73-2G4M08S1C-electroniccats U 0 40 Y Y 1 F N
+DEF E73-2G4M08S1C-electroniccats-BastBLE-rescue U 0 40 Y Y 1 F N
 F0 "U" 0 1150 50 H V C CNN
-F1 "E73-2G4M08S1C-electroniccats" 0 -1100 50 H V C CNN
+F1 "E73-2G4M08S1C-electroniccats-BastBLE-rescue" 0 -1100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
