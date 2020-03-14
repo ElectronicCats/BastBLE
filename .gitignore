@@ -1,2 +1,6 @@
 
 *.sch-bak
+
+*.kicad_pcb-bak
+
+.DS_Store

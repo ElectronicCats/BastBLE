@@ -476,7 +476,7 @@ U 1 1 5E2894B4
 P 3120 2725
 F 0 "L1" V 3165 2605 50  0000 C CNN
 F 1 "10uH" V 3070 2735 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x01_P2.54mm_Vertical_SMD" H 3120 2725 50  0001 C CNN
+F 2 "Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3120 2725 50  0001 C CNN
 F 3 "~" H 3120 2725 50  0001 C CNN
 	1    3120 2725
 	0    1    1    0   
@@ -1255,7 +1255,7 @@ Text Label 2995 1425 0    50   ~ 0
 D11
 Text Notes 3205 1420 0    50   ~ 0
 NOTA: DFU??
-Text Notes 885  2905 0    50   ~ 0
+Text Notes 684  2858 0    50   ~ 0
 NOTA: BOOT
 Wire Wire Line
 	6190 5490 6115 5490
