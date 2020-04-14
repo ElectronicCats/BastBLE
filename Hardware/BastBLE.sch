@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:BastBLE-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -157,23 +158,6 @@ F 3 "" H 3495 2860 50  0001 C CNN
 	1    3495 2860
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1195 2625 1195 2595
-Wire Wire Line
-	1195 2625 1545 2625
-$Comp
-L power:+3V3 #PWR06
-U 1 1 5E20EBA3
-P 1195 2595
-F 0 "#PWR06" H 1195 2445 50  0001 C CNN
-F 1 "+3V3" H 1210 2768 50  0000 C CNN
-F 2 "" H 1195 2595 50  0001 C CNN
-F 3 "" H 1195 2595 50  0001 C CNN
-	1    1195 2595
-	1    0    0    -1  
-$EndComp
-Text Label 2995 1325 0    50   ~ 0
-SWCLK
 Text Label 3000 1525 0    50   ~ 0
 SWDIO
 $Comp
@@ -203,21 +187,19 @@ Text Label 1390 1425 0    50   ~ 0
 A0
 Text Label 1390 925  0    50   ~ 0
 LED
-Text Label 1390 2325 0    50   ~ 0
+Text Label 2995 1125 0    50   ~ 0
 RX
-Text Label 1350 2925 0    50   ~ 0
+Text Label 1390 2125 0    50   ~ 0
 D12
 Wire Wire Line
 	1350 2925 1545 2925
 Text Label 1390 1025 0    50   ~ 0
 A1
-Text Label 1390 2525 0    50   ~ 0
-A2
-Text Label 1395 2225 0    50   ~ 0
+Text Label 1390 2425 0    50   ~ 0
 A3
 Text Label 1390 1125 0    50   ~ 0
 A4
-Text Label 1390 1525 0    50   ~ 0
+Text Label 1390 2325 0    50   ~ 0
 A5
 Text Label 1390 1625 0    50   ~ 0
 AREF
@@ -503,11 +485,9 @@ Wire Wire Line
 Wire Wire Line
 	3300 2925 2895 2925
 Connection ~ 3300 2725
-Text Label 1390 2125 0    50   ~ 0
+Text Label 2995 925  0    50   ~ 0
 TX
-Text Label 1390 2425 0    50   ~ 0
-D13
-Text Label 1385 1925 0    50   ~ 0
+Text Label 1390 1725 0    50   ~ 0
 D9
 Text Label 3005 2225 0    50   ~ 0
 QSPI_DATA0
@@ -813,7 +793,7 @@ Wire Wire Line
 Connection ~ 4720 6855
 Wire Wire Line
 	4720 6855 4720 6795
-Text Label 1390 1725 0    50   ~ 0
+Text Label 1385 1925 0    50   ~ 0
 VBAT
 Text Label 4905 6855 0    50   ~ 0
 VBAT
@@ -1247,12 +1227,10 @@ Text Notes 6040 4595 0    89   ~ 0
 SWD CONN
 Text Label 1390 825  0    50   ~ 0
 D5
-Text Label 2995 925  0    50   ~ 0
+Text Label 1390 1525 0    50   ~ 0
 D6
-Text Label 2995 1125 0    50   ~ 0
-D10
 Text Label 2995 1425 0    50   ~ 0
-D11
+D10
 Text Notes 3205 1420 0    50   ~ 0
 NOTA: DFU??
 Text Notes 684  2858 0    50   ~ 0
@@ -1410,4 +1388,27 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001984g.pdf" H 4120 5255 
 	1    4270 5305
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	1195 2625 1545 2625
+Wire Wire Line
+	1195 2625 1195 2595
+$Comp
+L power:+3V3 #PWR06
+U 1 1 5E20EBA3
+P 1195 2595
+F 0 "#PWR06" H 1195 2445 50  0001 C CNN
+F 1 "+3V3" H 1210 2768 50  0000 C CNN
+F 2 "" H 1195 2595 50  0001 C CNN
+F 3 "" H 1195 2595 50  0001 C CNN
+	1    1195 2595
+	1    0    0    -1  
+$EndComp
+Text Label 1395 2225 0    50   ~ 0
+D13
+Text Label 2995 1325 0    50   ~ 0
+SWCLK
+Text Label 1390 2525 0    50   ~ 0
+D11
+Text Label 1350 2925 0    50   ~ 0
+A2
 $EndSCHEMATC
