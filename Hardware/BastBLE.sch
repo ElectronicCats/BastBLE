@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:BastBLE-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -1243,7 +1242,7 @@ U 1 1 5E39C807
 P 1190 5640
 F 0 "Q1" H 1394 5686 50  0000 L CNN
 F 1 "DMG3415U-7" H 1370 5770 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 1390 5740 50  0001 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1390 5740 50  0001 C CNN
 F 3 "~" H 1190 5640 50  0001 C CNN
 	1    1190 5640
 	1    0    0    -1  
@@ -1411,4 +1410,6 @@ Text Label 1390 2525 0    50   ~ 0
 D11
 Text Label 1350 2925 0    50   ~ 0
 A2
+Text Notes 575  2230 0    50   Italic 10
+Agregar capacitores
 $EndSCHEMATC
