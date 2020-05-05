@@ -922,17 +922,6 @@ F 3 "" H 6005 1245 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR031
-U 1 1 5E3E7D7A
-P 6005 920
-F 0 "#PWR031" H 6005 770 50  0001 C CNN
-F 1 "+3V3" H 6020 1093 50  0000 C CNN
-F 2 "" H 6005 920 50  0001 C CNN
-F 3 "" H 6005 920 50  0001 C CNN
-	1    6005 920 
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C_Small C7
 U 1 1 5E3ED4E5
 P 6265 1095
@@ -1463,4 +1452,15 @@ Wire Wire Line
 Connection ~ 1465 2340
 Text Notes 3770 1650 0    50   ~ 0
 NOTA: DFU??
+$Comp
+L power:VBUS #PWR?
+U 1 1 5EBF05F5
+P 6005 920
+F 0 "#PWR?" H 6005 770 50  0001 C CNN
+F 1 "VBUS" H 6020 1093 50  0000 C CNN
+F 2 "" H 6005 920 50  0001 C CNN
+F 3 "" H 6005 920 50  0001 C CNN
+	1    6005 920 
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
