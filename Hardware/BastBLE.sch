@@ -189,7 +189,7 @@ Text Label 1655 1210 0    50   ~ 0
 LED
 Text Label 3260 1410 0    50   ~ 0
 RX
-Text Label 1655 2410 0    50   ~ 0
+Text Label 1655 2610 0    50   ~ 0
 D12
 Wire Wire Line
 	1615 3210 1810 3210
@@ -487,7 +487,7 @@ Wire Wire Line
 Connection ~ 3565 3010
 Text Label 3260 1210 0    50   ~ 0
 TX
-Text Label 1655 2710 0    50   ~ 0
+Text Label 1655 2810 0    50   ~ 0
 D9
 Text Label 3270 2510 0    50   ~ 0
 QSPI_DATA0
@@ -509,7 +509,7 @@ Text Label 3260 1510 0    50   ~ 0
 QSPI_DATA2
 Text Label 3260 1310 0    50   ~ 0
 MOSI
-Text Label 1655 1610 0    50   ~ 0
+Text Label 1655 1110 0    50   ~ 0
 SCK
 Text Notes 1100 3810 0    50   ~ 0
 QSPI. So you can use any GPIOs except \nP0.10, P1.06, P0.09, P1.03, P1.07, P1.05, P1.02, P1.04 and P1.01 \nwithout any problems what so ever
@@ -1214,9 +1214,7 @@ Wire Notes Line
 	6975 4335 6980 4335
 Text Notes 6040 4595 0    89   ~ 0
 SWD CONN
-Text Label 1655 1110 0    50   ~ 0
-D5
-Text Label 1655 2610 0    50   ~ 0
+Text Label 1655 2410 0    50   ~ 0
 D6
 Text Label 3260 1710 0    50   ~ 0
 D10
@@ -1394,7 +1392,7 @@ Text Label 1615 3210 0    50   ~ 0
 D13
 Text Label 3260 1610 0    50   ~ 0
 SWCLK
-Text Label 1655 2810 0    50   ~ 0
+Text Label 1655 2710 0    50   ~ 0
 D11
 Text Label 1660 2510 0    50   ~ 0
 A2
@@ -1453,14 +1451,16 @@ Connection ~ 1465 2340
 Text Notes 3770 1650 0    50   ~ 0
 NOTA: DFU??
 $Comp
-L power:VBUS #PWR?
+L power:VBUS #PWR0101
 U 1 1 5EBF05F5
 P 6005 920
-F 0 "#PWR?" H 6005 770 50  0001 C CNN
+F 0 "#PWR0101" H 6005 770 50  0001 C CNN
 F 1 "VBUS" H 6020 1093 50  0000 C CNN
 F 2 "" H 6005 920 50  0001 C CNN
 F 3 "" H 6005 920 50  0001 C CNN
 	1    6005 920 
 	1    0    0    -1  
 $EndComp
+Text Label 1655 1610 0    50   ~ 0
+D5
 $EndSCHEMATC
