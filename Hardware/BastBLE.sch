@@ -185,7 +185,7 @@ Text Label 3275 2910 0    50   ~ 0
 RST
 Text Label 1655 1710 0    50   ~ 0
 A0
-Text Label 1655 1210 0    50   ~ 0
+Text Label 3265 2010 0    50   ~ 0
 LED
 Text Label 3260 1410 0    50   ~ 0
 RX
@@ -493,9 +493,9 @@ Text Label 3270 2510 0    50   ~ 0
 QSPI_DATA0
 Text Label 3275 2710 0    50   ~ 0
 MISO
-Text Label 3265 2010 0    50   ~ 0
+Text Label 1655 1110 0    50   ~ 0
 SDA
-Text Label 3265 1910 0    50   ~ 0
+Text Label 1655 1210 0    50   ~ 0
 SCL
 Text Label 3265 2310 0    50   ~ 0
 QSPI_CS
@@ -509,7 +509,7 @@ Text Label 3260 1510 0    50   ~ 0
 QSPI_DATA2
 Text Label 3260 1310 0    50   ~ 0
 MOSI
-Text Label 1655 1110 0    50   ~ 0
+Text Label 3265 1910 0    50   ~ 0
 SCK
 Text Notes 1100 3810 0    50   ~ 0
 QSPI. So you can use any GPIOs except \nP0.10, P1.06, P0.09, P1.03, P1.07, P1.05, P1.02, P1.04 and P1.01 \nwithout any problems what so ever
