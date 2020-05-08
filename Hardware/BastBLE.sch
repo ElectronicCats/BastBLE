@@ -189,7 +189,7 @@ Text Label 3265 2010 0    50   ~ 0
 LED
 Text Label 3260 1410 0    50   ~ 0
 RX
-Text Label 1655 2610 0    50   ~ 0
+Text Label 1655 2710 0    50   ~ 0
 D12
 Wire Wire Line
 	1615 3210 1810 3210
@@ -1392,7 +1392,7 @@ Text Label 1615 3210 0    50   ~ 0
 D13
 Text Label 3260 1610 0    50   ~ 0
 SWCLK
-Text Label 1655 2710 0    50   ~ 0
+Text Label 1655 2610 0    50   ~ 0
 D11
 Text Label 1660 2510 0    50   ~ 0
 A2
