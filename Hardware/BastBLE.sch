@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:BastBLE-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -189,15 +188,13 @@ Text Label 3265 2010 0    50   ~ 0
 LED
 Text Label 3260 1410 0    50   ~ 0
 RX
-Text Label 1655 2710 0    50   ~ 0
+Text Label 1655 2810 0    50   ~ 0
 D12
 Wire Wire Line
 	1615 3210 1810 3210
-Text Label 1655 1310 0    50   ~ 0
+Text Label 1655 1410 0    50   ~ 0
 A1
 Text Label 1655 2010 0    50   ~ 0
-A3
-Text Label 1655 1410 0    50   ~ 0
 A4
 Text Label 1655 1810 0    50   ~ 0
 A5
@@ -487,7 +484,7 @@ Wire Wire Line
 Connection ~ 3565 3010
 Text Label 3260 1210 0    50   ~ 0
 TX
-Text Label 1655 2810 0    50   ~ 0
+Text Label 1655 2410 0    50   ~ 0
 D9
 Text Label 3270 2510 0    50   ~ 0
 QSPI_DATA0
@@ -530,8 +527,6 @@ Wire Wire Line
 	9105 1515 8830 1515
 Wire Wire Line
 	8830 1515 8830 1325
-Wire Wire Line
-	9105 1615 9010 1615
 Wire Wire Line
 	9105 1815 9010 1815
 Wire Wire Line
@@ -692,8 +687,6 @@ Text Label 9010 1915 2    50   ~ 0
 A1
 Text Label 9010 1815 2    50   ~ 0
 A0
-Text Label 9010 1615 2    50   ~ 0
-AREF
 Text Label 9000 1415 2    50   ~ 0
 RST
 Wire Wire Line
@@ -1214,9 +1207,9 @@ Wire Notes Line
 	6975 4335 6980 4335
 Text Notes 6040 4595 0    89   ~ 0
 SWD CONN
-Text Label 1655 2410 0    50   ~ 0
+Text Label 1655 1610 0    50   ~ 0
 D6
-Text Label 3260 1710 0    50   ~ 0
+Text Label 1655 2710 0    50   ~ 0
 D10
 Text Notes 949  3143 0    50   ~ 0
 NOTA: BOOT
@@ -1394,8 +1387,6 @@ Text Label 3260 1610 0    50   ~ 0
 SWCLK
 Text Label 1655 2610 0    50   ~ 0
 D11
-Text Label 1660 2510 0    50   ~ 0
-A2
 $Comp
 L Device:C_Small C10
 U 1 1 5EA464F4
@@ -1461,6 +1452,15 @@ F 3 "" H 6005 920 50  0001 C CNN
 	1    6005 920 
 	1    0    0    -1  
 $EndComp
-Text Label 1655 1610 0    50   ~ 0
+Text Label 3260 1710 0    50   ~ 0
 D5
+Text Label 1660 2510 0    50   ~ 0
+A2
+Text Label 1655 1310 0    50   ~ 0
+A3
+Wire Wire Line
+	8740 1715 8740 1615
+Wire Wire Line
+	8740 1615 9105 1615
+Connection ~ 8740 1715
 $EndSCHEMATC
