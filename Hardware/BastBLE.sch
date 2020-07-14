@@ -686,14 +686,10 @@ Text Label 9015 2015 2    50   ~ 0
 A2
 Text Label 9010 1915 2    50   ~ 0
 A1
-Text Label 9010 1815 2    50   ~ 0
-A0
 Text Label 9000 1415 2    50   ~ 0
 RST
 Wire Wire Line
 	8740 1715 8740 1755
-Wire Wire Line
-	8740 1715 9105 1715
 $Comp
 L power:GND #PWR039
 U 1 1 5E343A24
@@ -703,17 +699,6 @@ F 1 "GND" H 8745 1582 50  0000 C CNN
 F 2 "" H 8740 1755 50  0001 C CNN
 F 3 "" H 8740 1755 50  0001 C CNN
 	1    8740 1755
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Screw_Terminal_01x16 J3
-U 1 1 5E2A6306
-P 9305 2115
-F 0 "J3" H 9223 1090 50  0000 C CNN
-F 1 "Conn_left" V 9410 2125 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x16_P2.54mm_Vertical" H 9305 2115 50  0001 C CNN
-F 3 "~" H 9305 2115 50  0001 C CNN
-	1    9305 2115
 	1    0    0    -1  
 $EndComp
 Wire Notes Line
@@ -1457,11 +1442,25 @@ Text Label 1660 2510 0    50   ~ 0
 A2
 Text Label 1655 1310 0    50   ~ 0
 A3
-Wire Wire Line
-	8740 1715 8740 1615
-Wire Wire Line
-	8740 1615 9105 1615
-Connection ~ 8740 1715
 Text Label 1650 2210 0    50   ~ 0
 D12
+$Comp
+L Connector:Screw_Terminal_01x16 J3
+U 1 1 5E2A6306
+P 9305 2115
+F 0 "J3" H 9223 1090 50  0000 C CNN
+F 1 "Conn_left" V 9410 2125 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x16_P2.54mm_Vertical" H 9305 2115 50  0001 C CNN
+F 3 "~" H 9305 2115 50  0001 C CNN
+	1    9305 2115
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8740 1715 9105 1715
+Text Label 9010 1815 2    50   ~ 0
+A0
+Wire Wire Line
+	9105 1615 9010 1615
+Text Label 9010 1615 2    50   ~ 0
+AREF
 $EndSCHEMATC
