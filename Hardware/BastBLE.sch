@@ -790,9 +790,9 @@ L Memory_Flash:W25Q32JVSS U4
 U 1 1 5E3C76BE
 P 8865 5500
 F 0 "U4" H 8630 5845 50  0000 C CNN
-F 1 "W25Q32JVSS" H 9145 5860 50  0000 C CNN
+F 1 "GD25Q16C" H 9145 5860 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_5.23x5.23mm_P1.27mm" H 8865 5500 50  0001 C CNN
-F 3 "http://www.winbond.com/resource-files/w25q32jv%20revg%2003272018%20plus.pdf" H 8865 5500 50  0001 C CNN
+F 3 "http://www.elm-tech.com/en/products/spi-flash-memory/gd25q16/gd25q16.pdf" H 8865 5500 50  0001 C CNN
 	1    8865 5500
 	1    0    0    -1  
 $EndComp
