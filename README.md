@@ -71,6 +71,9 @@ The nRF52840 Micro Dev Kit USB Dongle can be used to play with : *nRF5 SDK*, *Op
 We would love for you to contribute to this project and help make it even better than it is today! 
 
 License
+
+![OpenSourceLicense](https://github.com/ElectronicCats/AjoloteBoard/raw/master/OpenSourceLicense.png)
+
 Electronic Cats invests time and resources providing this open source design, please support Electronic Cats and open-source hardware by purchasing products from Electronic Cats!
 
 Designed by Electronic Cats.
