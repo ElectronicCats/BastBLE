@@ -51,7 +51,7 @@ The nRF52840 Micro Dev Kit USB Dongle can be used to play with : *nRF5 SDK*, *Op
 
 | Software  | Brief Description |
 | ---------- | ----- |
-| [Arduino Core MbedOS](https://github.com/ElectronicCats/ArduinoCore-nRF528x-mbedos) | The friendly Arduino core by Electronic Cats with MbedOS, |
+| [Arduino Core MbedOS](https://github.com/ElectronicCats/ArduinoCore-mbed) | The friendly Arduino core by Electronic Cats with MbedOS, |
 | [UF2 Bootloader](https://github.com/ElectronicCats/Adafruit_nRF52_Bootloader) | UF2 Bootloader fir NRF52, |
 | [nRF5 SDK](nrf5-sdk/) | Offical Software Development Kit for nRF51 and nRF52 Series |
 | [OpenThread Border Router](OTBR/) | An open source border router, designed to work with OpenThread |
