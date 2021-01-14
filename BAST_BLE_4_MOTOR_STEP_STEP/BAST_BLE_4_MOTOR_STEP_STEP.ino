@@ -1,5 +1,9 @@
+#include <ArduinoBLE.h>
+
 int x;
 char dato;
+static const char* greeting = "Hello World!";
+
 //pines de griper 
 #define IN1  15
 #define IN2  16
@@ -50,23 +54,51 @@ int paso4 [4][4] =
   {0, 0, 1, 1},
   {1, 0, 0, 1}
 };
+
+BLEService greetingService("180C"); 
+BLEStringCharacteristic greetingCharacteristic("2A56", BLERead, 13); 
+BLEService ledService("19B10000-E8F2-537E-4F6C-D104768A1214");
+BLEByteCharacteristic switchCharacteristic("19B10001-E8F2-537E-4F6C-D104768A1214", BLERead | BLEWrite);
+
 void setup() {
-  // put your setup code here, to run once:
+  while (!Serial);
+  Serial.begin(115200);
   for (x = 2; x <= 13; x++) {
     pinMode(x, OUTPUT);
   }
   for (x = 15; x <= 18; x++) {
     pinMode(x, OUTPUT);
-  }   
-  Serial.begin(115200);
-  while(!Serial);
+  }  
+  if (!BLE.begin()) {   
+    Serial.println("starting BLE failed!");
+    while (1);
+  }
+  BLE.setLocalName("bast ble ec");  
+  BLE.setAdvertisedService(greetingService); 
+  greetingService.addCharacteristic(greetingCharacteristic);
+  BLE.addService(greetingService);
+  greetingCharacteristic.setValue(greeting);
+  Serial.print("Peripheral device MAC: ");
+  Serial.println(BLE.address());
+  Serial.println("esperando coneccion...");
+  BLE.setAdvertisedService(ledService);
+  ledService.addCharacteristic(switchCharacteristic);
+  BLE.addService(ledService);
+  BLE.advertise(); 
+  switchCharacteristic.writeValue(0);
+
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  if (Serial.available() > 0) {
-    dato = Serial.read();
-    if (dato == 'O' ) {
+  BLEDevice central = BLE.central();  
+  if (central) {
+    Serial.print("Connected to central MAC: ");
+    }
+    Serial.println(central.address());
+    digitalWrite(8, HIGH);
+    while (central.connected()){
+        if (switchCharacteristic.written()) {
+      if (switchCharacteristic.value() == 'O' ) {   // any value other than 0
       for (x = 0; x < 15; x++) {
         for (int i = 0; i < 4; i++)
         {
@@ -78,8 +110,7 @@ void loop() {
         }
       }
       Serial.println(" GRIPER aumento");
-    }
-    if (dato == 'C') {
+        } else if (switchCharacteristic.value() == 'C' ) {   // any value other than 0
       for (x = 0; x < 15; x++) {
         for (int i = 3; i >= 0; i--)
         {
@@ -91,8 +122,7 @@ void loop() {
         }
       }
       Serial.println("GIRPER decremento");
-    }
-    if (dato == 'U') {
+        } else if (switchCharacteristic.value() == 'U' ) {                              // a 0 value
       for (x = 0; x < 15; x++) {
         for (int i = 0; i < 4; i++)
         {
@@ -104,8 +134,7 @@ void loop() {
         }
       }
       Serial.println("BRAZO aumento");
-    }
-    if (dato == 'D') {
+        }else if (switchCharacteristic.value() == 'D' ) {                              // a 0 value
       for (x = 0; x < 15; x++) {
         for (int i = 3; i >= 0; i--)
         {
@@ -117,8 +146,7 @@ void loop() {
         }
       }
       Serial.println("BRAZO decremento");
-    }
-    if (dato == 'A') {
+        }else if (switchCharacteristic.value() == 'A' ) {                              // a 0 value
       for (x = 0; x < 15; x++) {
         for (int i = 0; i < 4; i++)
         {
@@ -130,8 +158,7 @@ void loop() {
         }
       }
       Serial.println("CODO aumento");
-    }
-    if (dato == 'B') {
+        }else if (switchCharacteristic.value() == 'B' ) {                              // a 0 value
       for (x = 0; x < 15; x++) {
         for (int i = 3; i >= 0; i--)
         {
@@ -143,8 +170,7 @@ void loop() {
         }
       }
       Serial.println("CODO decremento");
-    }
-    if (dato == 'R') {
+        }else if (switchCharacteristic.value() == 'R' ) {                              // a 0 value
       for (x = 0; x < 15; x++) {
         for (int i = 0; i < 4; i++)
         {
@@ -156,8 +182,7 @@ void loop() {
         }
       }
       Serial.println("BASE aumento");
-    }
-    if (dato == 'L') {
+        }else if (switchCharacteristic.value() == 'L' ) {                              // a 0 value
       for (x = 0; x < 15; x++) {
         for (int i = 3; i >= 0; i--)
         {
@@ -169,6 +194,10 @@ void loop() {
         }
       }
       Serial.println("BASE decremento");
-    }    
-  }
+        }
+      }
+      } 
+    digitalWrite(8, LOW);
+    Serial.print("Disconnected from central MAC: ");
+    Serial.println(central.address());
 }
